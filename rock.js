@@ -1,17 +1,18 @@
- const game = () => {
-       let pScore = 0;
-       let cScore = 0;
 
-    const startGame = () => {
-        const playBtn = document.querySelector(".intro button");
-        const introScreen = document.querySelector(".intro");
-        const match = document.querySelector(".match");
-           platBtn.addEventListener("click",() => {
-            introScreen.classList.add("fadeOut");
-            
-       });
+    const game = () =>{
+        letpScore = 0;
+        let cScore = 0;
+        const startGame =() =>{
+            const playBtn = document.querySelector(".intro button");
+            const introScreen = document.querySelector(".intro");
+            const match = document.querySelector(".match");
+            playBtn.addEventListener("click", () =>{
+                introScreen.classList.add("fadeout");
+                match.classList.add("fadein");
+            });
+        };
     };
-    const playMatch =() =>{
+   const playMatch =() =>{
         const options = document.querySelectorAll(".options button");
          const playerHand = document.querySelector(".playerhand");
           const computerhand = document.querySelector(".computer=hand");
@@ -98,6 +99,3 @@ setTimeout(() =>{
     
 };
 game();
-
- 
-};
