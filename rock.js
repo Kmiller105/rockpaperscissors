@@ -6,18 +6,18 @@
             const playBtn = document.querySelector(".intro button");
             const introScreen = document.querySelector(".intro");
             const match = document.querySelector(".match");
-            playBtn.addEventListener("click", () =>{
-                introScreen.classList.add("fadeout");
-                match.classList.add("fadein");
+                playBtn.addEventListener("click", () =>{
+                introScreen.classList.add("fadeOut");
+                match.classList.add("fadeIn");
             });
         };
     };
-   const playMatch =() =>{
-        const options = document.querySelectorAll(".options button");
-         const playerHand = document.querySelector(".playerhand");
-          const computerhand = document.querySelector(".computer=hand");
-           const computerOptions =["rock", "paper", "scissors"];
-            const hands =document.querySelectorAll(".hands img");
+       const playMatch =() =>{
+          const options = document.querySelectorAll(".options button");
+            const playerHand = document.querySelector(".playerhand");
+             const computerhand = document.querySelector(".computer=hand");
+               const computerOptions =["rock", "paper", "scissors"];
+                 const hands =document.querySelectorAll(".hands img");
 
         hands.forEach(hand =>{
         hand.addEventListener("animationend", function(){
@@ -30,12 +30,12 @@
     option.addEventListener("click", function(){
      const computerNumber  = Math.floor(Math.random() * 3);
 
-setTimeout(() =>{
+       setTimeout(() =>{
     compareHands(this.textContent, computerChoice);
     playerHand.src =`.assets/${this.textContent}.png`;
     computerHand.src =`.assets/${computerChoice}.png`;
 
-      },2000)
+           },2000)
 
 
          playerHand.style.animation ="shakePlayer 2s ease";
@@ -71,8 +71,8 @@ setTimeout(() =>{
 
 
         }
-        if (playerChoice ==="paper"){
-            if (computerChoice === "scissors"){
+         if (playerChoice ==="paper"){
+          if (computerChoice === "scissors"){
                 winner.textContent ="Computer Wins";
                 pScore++;
                 return;
@@ -89,12 +89,12 @@ setTimeout(() =>{
                 pScore++;
                 return;
 
-    }else{
-        winner.textContent ="Player Wins";
-        cScore++;
-        return;
-    }
-    }
+         }else{
+            winner.textContent ="Player Wins";
+             cScore++;
+             return;
+                }
+               }
     startGame();
     
 };
