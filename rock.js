@@ -96,6 +96,7 @@
                 }
                }
     startGame();
-    
-};
+    playMatch();
+
+    };
 game();
